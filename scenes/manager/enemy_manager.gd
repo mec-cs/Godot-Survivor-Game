@@ -45,7 +45,7 @@ func get_spawn_position():
 func on_timer_timeout():
 	timer.start()
 	
-	var player = get_tree().get_first_node_in_group("player")
+	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
 		return
 	

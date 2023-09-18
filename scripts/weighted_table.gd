@@ -10,7 +10,7 @@ func add_item(item, weight: int):
 
 
 func pick_item():
-	var chosen_weight = randf_range(1, weight_sum)
+	var chosen_weight = randi_range(1, weight_sum)
 	var iteration_sum = 0
 	
 	for item in items:
