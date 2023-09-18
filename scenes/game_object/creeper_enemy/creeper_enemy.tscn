@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2cwmh3w7f53o"]
+[gd_scene load_steps=16 format=3 uid="uid://b2cwmh3w7f53o"]
 
 [ext_resource type="PackedScene" uid="uid://gf6qc7fuu2l7" path="res://scenes/component/health_component.tscn" id="1_muolw"]
 [ext_resource type="Script" path="res://scenes/game_object/creeper_enemy/creeper_enemy.gd" id="1_ommjv"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bjlf4o4v5t52g" path="res://scenes/game_object/creeper_enemy/creeper_enemy.png" id="3_238aw"]
 [ext_resource type="PackedScene" uid="uid://bsv7d4ux6qqv2" path="res://scenes/component/hurtbox_component.tscn" id="4_fh07l"]
 [ext_resource type="PackedScene" uid="uid://dk6s4l422kgr7" path="res://scenes/component/vail_drop_component.tscn" id="4_rkfvy"]
+[ext_resource type="PackedScene" uid="uid://dctjm2y8faw2u" path="res://scenes/component/hit_flash_component.tscn" id="5_fqhgc"]
+[ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_yt4dp"]
 
 [sub_resource type="Animation" id="Animation_byq8x"]
 length = 0.001
@@ -112,6 +114,11 @@ _data = {
 "enemy_walk": SubResource("Animation_pp6oh")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_txalw"]
+resource_local_to_scene = true
+shader = ExtResource("6_yt4dp")
+shader_parameter/lerp_percent = 0.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gw1a"]
 radius = 7.0
 
@@ -140,6 +147,11 @@ acceleration = 20.0
 
 [node name="VailDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_rkfvy")]
 health_component = NodePath("../HealthComponent")
+
+[node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_fqhgc")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_txalw")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("2_v3sdi")]
 health_component = NodePath("../HealthComponent")
