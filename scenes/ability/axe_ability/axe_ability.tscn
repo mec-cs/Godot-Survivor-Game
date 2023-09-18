@@ -1,10 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7reg35xj6u62"]
+[gd_scene load_steps=8 format=3 uid="uid://b7reg35xj6u62"]
 
 [ext_resource type="Texture2D" uid="uid://x1t3kc4ro0t4" path="res://scenes/ability/axe_ability/axe.png" id="1_fh7r8"]
 [ext_resource type="Script" path="res://scenes/ability/axe_ability/axe_ability.gd" id="1_x5nit"]
+[ext_resource type="PackedScene" uid="uid://6nlai5mqfgw1" path="res://scenes/component/hitbox_component.tscn" id="3_nv2lj"]
+
+[sub_resource type="Animation" id="Animation_j1qhv"]
+resource_name = "default"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_turke"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jvowy"]
+_data = {
+"RESET": SubResource("Animation_turke"),
+"default": SubResource("Animation_j1qhv")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44cxo"]
 
 [node name="AxeAbility" type="Node2D"]
 script = ExtResource("1_x5nit")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+libraries = {
+"": SubResource("AnimationLibrary_jvowy")
+}
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_fh7r8")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("3_nv2lj")]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_44cxo")
