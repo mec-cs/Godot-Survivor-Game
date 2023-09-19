@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7rkfvv2owpy8"]
+
+[ext_resource type="Shader" path="res://scenes/UI/vhs_crt_affect.gdshader" id="1_k0wt8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gq0fl"]
+shader = ExtResource("1_k0wt8")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.143
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.2
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = false
+shader_parameter/roll_speed = 1.0
+shader_parameter/roll_size = 6.0
+shader_parameter/roll_variation = 1.1
+shader_parameter/distort_intensity = 0.02
+shader_parameter/noise_opacity = 0.01
+shader_parameter/noise_speed = 3.0
+shader_parameter/static_noise_intensity = 0.015
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.25
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.1
+shader_parameter/vignette_opacity = 0.05
+
+[node name="VHS_CRT_affect" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_gq0fl")
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
