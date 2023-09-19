@@ -1,7 +1,32 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c02taye7a7wcv"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c02taye7a7wcv"]
 
 [ext_resource type="FontFile" uid="uid://diqcmnew4jujq" path="res://resources/theme/Bitfantasy.ttf" id="1_6886q"]
+[ext_resource type="Texture2D" uid="uid://bxqoh7klyasqv" path="res://assets/ui/ui.png" id="1_icr0r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05gvk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("1_icr0r")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(18, 2, 12, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fuj2b"]
+texture = ExtResource("1_icr0r")
+texture_margin_left = 4.0
+texture_margin_top = 13.0
+texture_margin_right = 4.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(0, 0, 16, 16)
 
 [resource]
 default_font = ExtResource("1_6886q")
 default_font_size = 16
+AlternatePanelContainer/base_type = &"PanelContainer"
+AlternatePanelContainer/styles/panel = SubResource("StyleBoxTexture_05gvk")
+Label/constants/line_spacing = 0
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_fuj2b")
