@@ -44,3 +44,5 @@ func on_area_entered(other_area: Area2D):
 	tween.tween_property(sprite_2d, "scale", Vector2.ZERO, 0.15).set_delay(0.35)
 	tween.chain() # wait for all previous tweens to finish before moving on the next tweens
 	tween.tween_callback(collect)
+	
+	$RandomAudioStreamPlayer2DComponent.play_random()
