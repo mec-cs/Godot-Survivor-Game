@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c02taye7a7wcv"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://c02taye7a7wcv"]
 
 [ext_resource type="FontFile" uid="uid://diqcmnew4jujq" path="res://resources/theme/Bitfantasy.ttf" id="1_6886q"]
 [ext_resource type="Texture2D" uid="uid://bxqoh7klyasqv" path="res://assets/ui/ui.png" id="1_icr0r"]
@@ -41,6 +41,35 @@ texture_margin_right = 3.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(4, 20, 8, 8)
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gq5ob"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0wnc2"]
+size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pvnb"]
+bg_color = Color(0.262745, 0.878431, 0.698039, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkuef"]
+bg_color = Color(0.262745, 0.878431, 0.698039, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxstw"]
+content_margin_left = 2.0
+content_margin_top = 7.0
+content_margin_right = 2.0
+content_margin_bottom = 7.0
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fuj2b"]
 texture = ExtResource("1_icr0r")
 texture_margin_left = 4.0
@@ -57,12 +86,23 @@ default_font = ExtResource("1_6886q")
 default_font_size = 16
 AlternatePanelContainer/base_type = &"PanelContainer"
 AlternatePanelContainer/styles/panel = SubResource("StyleBoxTexture_05gvk")
+BlueOutlineLabel/base_type = &"Label"
+BlueOutlineLabel/colors/font_outline_color = Color(0.14902, 0.168627, 0.266667, 1)
+BlueOutlineLabel/colors/font_shadow_color = Color(0.14902, 0.168627, 0.266667, 1)
+BlueOutlineLabel/constants/outline_size = 7
+BlueOutlineLabel/constants/shadow_offset_x = 0
+BlueOutlineLabel/constants/shadow_offset_y = 0
 Button/colors/font_color = Color(0.247059, 0.14902, 0.192157, 1)
 Button/colors/font_pressed_color = Color(0.545098, 0.254902, 0, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_ga76m")
 Button/styles/hover = SubResource("StyleBoxTexture_3k1ed")
 Button/styles/normal = SubResource("StyleBoxTexture_hecg0")
 Button/styles/pressed = SubResource("StyleBoxTexture_4ihj3")
+HSlider/icons/grabber = SubResource("PlaceholderTexture2D_gq5ob")
+HSlider/icons/grabber_highlight = SubResource("PlaceholderTexture2D_0wnc2")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_3pvnb")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_pkuef")
+HSlider/styles/slider = SubResource("StyleBoxFlat_qxstw")
 Label/constants/line_spacing = 0
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_fuj2b")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_crmf1")

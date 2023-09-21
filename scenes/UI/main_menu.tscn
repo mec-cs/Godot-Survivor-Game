@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhlts5ve5wwkg"]
+[gd_scene load_steps=5 format=3 uid="uid://bhlts5ve5wwkg"]
 
 [ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_urs7h"]
 [ext_resource type="PackedScene" uid="uid://6ob5pg8806l6" path="res://scenes/UI/sound_button.tscn" id="1_vvwyo"]
 [ext_resource type="TileSet" uid="uid://btpc3ci2vxbhq" path="res://resources/tileset.tres" id="1_wurvk"]
+[ext_resource type="PackedScene" uid="uid://dbfwp6uulhkjd" path="res://scenes/UI/vignette.tscn" id="2_lh4mv"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_urs7h")
@@ -39,6 +40,7 @@ size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 28
 text = "The Coliseum"
 
@@ -57,3 +59,5 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Quit
 "
+
+[node name="Vignette" parent="." instance=ExtResource("2_lh4mv")]
