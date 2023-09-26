@@ -1,9 +1,11 @@
-# Godot-Survivor-Game
-* vampire survivors, brotato like game with Godot Engine 4, you strive to survive against little enemies! 
+# The-Collesium
+* survivors game with Godot Engine 4, you strive to survive against little enemies! 
 * written in GDScript
 * technical development is almost over, still early access. new features and lots of improvements will be available soon!
 #
 #
+# Background
+I've played vampire survivors and brotato before, my curiosity about these genre made games has grown over time. I've always had a particular interest in open source tools, having been noticed about the existence of the godot engine, I made this game using this engine for fun and experimentation using the Udemy course and a lot of free use assets (specified in the links part).
 # 
 # Game Screenshots & live Video (soon)
 ![enter_screen](https://github.com/mec-cs/Godot-Survivor-Game/assets/102901204/48a12415-7b53-47e5-b062-b03cc2d86b50)
@@ -18,11 +20,13 @@
 #
 #
 #
-* Thanx to [Easings Website](https://easings.net/en) which helps me to understand easing animations well
+# Useful Links and Thanks
+* Thanks to Firebelley Games who contributes so much in my game development journey.
+* by the help of [Easings Website](https://easings.net/en), i understood easing animations
 * assets and UI sfx's by [Kenney Assets](https://www.kenney.nl/)
 * font is taken by [NB Collective](https://nimblebeastscollective.itch.io/nb-pixel-font-bundle)
 * game music --free for non/commercial use [Hit n Smash](https://freepd.com/)
 * Optional VHS and CRT affect is from [pend00](https://godotshaders.com/shader/vhs-and-crt-monitor-effect/)
 
 A game made in Godot Engine, throughout a course by [FirebelleyGames](https://www.youtube.com/@FirebelleyGames) in Udemy.
-I am following his course, here is the link: https://www.udemy.com/course/create-a-complete-2d-arena-survival-roguelike-game-in-godot-4
+I have followed his course, here is the link: https://www.udemy.com/course/create-a-complete-2d-arena-survival-roguelike-game-in-godot-4
