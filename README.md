@@ -3,7 +3,6 @@
 * written in GDScript
 * technical development is almost over, still early access. new features and lots of improvements will be available soon!
 #
-#
 # Background
 I've played vampire survivors and brotato before, my curiosity about these genre made games has grown over time. I've always had a particular interest in open source tools, having been noticed about the existence of the godot engine, I made this game using this engine for fun and experimentation using the Udemy course and a lot of free use assets (specified in the links part).
 # 
