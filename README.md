@@ -1,4 +1,4 @@
-# The-Collesium
+# The-Colosseum
 * survivors game with Godot Engine 4, you strive to survive against little enemies! 
 * written in GDScript
 * technical development is almost over, still early access. new features and lots of improvements will be available soon!
