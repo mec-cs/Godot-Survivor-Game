@@ -42,7 +42,7 @@ size_flags_vertical = 4
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 28
-text = "The Coliseum"
+text = "The Colosseum"
 
 [node name="PlayButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("1_vvwyo")]
 unique_name_in_owner = true

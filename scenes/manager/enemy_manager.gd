@@ -3,13 +3,15 @@ extends Node
 const SPAWN_RADIUS = 340
 
 @export var basic_enemy_scene : PackedScene
-@export var wizard_enemy_scene: PackedScene
+@export var creeper_enemy_scene: PackedScene
+@export var ghost_enemy_scene: PackedScene
 @export var arena_time_manager: Node
 
 @onready var timer = $Timer
 
 var base_spawn_time = 0
 var enemy_table = WeighthedTable.new()
+var number_to_spawn = 1
 
 
 func _ready():
@@ -50,12 +52,13 @@ func on_timer_timeout():
 	if player == null:
 		return
 	
-	var enemy_scene = enemy_table.pick_item()
-	var enemy = enemy_scene.instantiate() as Node2D
-	
-	var entities_layer = get_tree().get_first_node_in_group("entities_layer")
-	entities_layer.add_child(enemy) # it will be added to the main
-	enemy.global_position = get_spawn_position()
+	for i in number_to_spawn:
+		var enemy_scene = enemy_table.pick_item()
+		var enemy = enemy_scene.instantiate() as Node2D
+		
+		var entities_layer = get_tree().get_first_node_in_group("entities_layer")
+		entities_layer.add_child(enemy) # it will be added to the main
+		enemy.global_position = get_spawn_position()
 
 
 func on_arena_difficulty_increased(arena_difficulty: int):
@@ -65,4 +68,9 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	
 	# with these condition blocks we can add more enemies
 	if arena_difficulty == 6:
-		enemy_table.add_item(wizard_enemy_scene, 20)
+		enemy_table.add_item(creeper_enemy_scene, 15)
+	elif arena_difficulty == 12:
+		enemy_table.add_item(ghost_enemy_scene, 6)
+	
+	if (arena_difficulty % 5) == 0:
+		number_to_spawn += 1

@@ -18,7 +18,7 @@
 script = ExtResource("1_r8a6d")
 end_screen_scene = ExtResource("2_rurbk")
 
-[node name="VHS_CRT_affect" parent="." instance=ExtResource("3_obnyh")]
+[node name="VHS_CRT_affect" parent="." groups=["game_effect"] instance=ExtResource("3_obnyh")]
 
 [node name="Vignette" parent="." instance=ExtResource("3_dma6i")]
 
@@ -50,8 +50,9 @@ layer_0/tile_data = PackedInt32Array(262144, 65536, 4, 262145, 0, 4, 262146, 0, 
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
 y_sort_enabled = true
 
-[node name="Player" parent="Entities" instance=ExtResource("1_v2tib")]
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_v2tib")]
 unique_name_in_owner = true
 position = Vector2(411, 230)
+arena_time_manager = NodePath("../../ArenaTimeManager")
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
