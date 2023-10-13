@@ -1,12 +1,14 @@
 # The-Colosseum
 * survivors game with Godot Engine 4, you strive to survive against little enemies! 
 * written in GDScript
-* technical development is almost over, still early access. new features and lots of improvements will be available soon!
+* technical development is almost over, still early access, has some bugs. new features and lots of improvements will be available soon!
 #
 # Background
 I've played vampire survivors and brotato before, my curiosity about these genre made games has grown over time. I've always had a particular interest in open source tools, having been noticed about the existence of the godot engine, I made this game using this engine for fun and experimentation using the Udemy course and a lot of free use assets (specified in the links part).
 # 
-# Game Screenshots & live Video (soon)
+# Game Screenshots & live Video
+Video of the game -> 
+https://youtu.be/3oSaQEZqcaI
 ![enter_screen](https://github.com/mec-cs/Godot-Survivor-Game/assets/102901204/48a12415-7b53-47e5-b062-b03cc2d86b50)
 ![upgrades_screen](https://github.com/mec-cs/Godot-Survivor-Game/assets/102901204/63612c62-5815-49f9-aabe-70aa61e1d83f)
 ![options_screen](https://github.com/mec-cs/Godot-Survivor-Game/assets/102901204/9abe38f3-95af-405a-a660-a1fbded4393b)
