@@ -3,12 +3,11 @@
 * written in GDScript
 * technical development is almost over, still early access, has some bugs. new features and lots of improvements will be available soon!
 #
-# Background
+## Background
 I've played vampire survivors and brotato before, my curiosity about these genre made games has grown over time. I've always had a particular interest in open source tools, having been noticed about the existence of the godot engine, I made this game using this engine for fun and experimentation using the Udemy course and a lot of free use assets (specified in the links part).
 # 
-# Game Screenshots & live Video
-Here is the game video on Youtube -- https://www.youtube.com/watch?v=3oSaQEZqcaI
-
+## Game Screenshots & live Video
+Here is the game video on Youtube -- https://www.youtube.com/watch?v=3oSaQEZqcaI  
 
 ![enter_screen](https://github.com/mec-cs/Godot-Survivor-Game/assets/102901204/48a12415-7b53-47e5-b062-b03cc2d86b50)
 ![upgrades_screen](https://github.com/mec-cs/Godot-Survivor-Game/assets/102901204/63612c62-5815-49f9-aabe-70aa61e1d83f)
@@ -22,8 +21,7 @@ Here is the game video on Youtube -- https://www.youtube.com/watch?v=3oSaQEZqcaI
 #
 #
 #
-# Useful Links and Thanks
--------------------------
+## Useful Links and Thanks
 * Thanks to Firebelley Games who contributes so much in my game development journey.
 * by the help of [Easings Website](https://easings.net/en), i understood easing animations
 * assets and UI sfx's by [Kenney Assets](https://www.kenney.nl/)
